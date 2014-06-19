@@ -249,7 +249,7 @@ def set_form_control_value(control, val):
                 if hasattr(control, 'checkable') and control.checkable:
                     control.checked = flag
                 else:
-                    control.value.add(v)
+                    control._value__set(v)
                 return
             elif (val == k or val == v) and not flag:
                 try:
