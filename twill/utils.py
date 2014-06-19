@@ -126,7 +126,7 @@ def print_form(n, f, OUT):
         if hasattr(field, 'value_options'):
             items = [ i.name if hasattr(i, 'name') else i 
                         for i in field.value_options ]
-            value_displayed = "%s of %s" % ([i for i in field.value], items)
+            value_displayed = "%s of %s" % ([i for i in field.value_options], items)
         else:
             value_displayed = "%s" % (field.value,)
 
